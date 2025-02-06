@@ -1,11 +1,12 @@
+import './MovieItem.css'
 import {useState} from 'react'
 
-function MovieItem() {
+function MovieItem({movieImg, movieName, movieDesc}) {
 
     return <div class="movieContainer">
-        <img src="src\assets\react.svg" />
-        <h3 class="movieName">MOVIE NAME</h3>
-        <p class="movieDesc">Description Here</p>
+        <img src={movieImg ? movieImg :'src\\assets\\react.svg'} />
+        <h3 class="movieName">{movieName ? movieName : "MOVIE NAME"}</h3>
+        <p class="movieDesc">{movieDesc ? movieDesc : "Description Here"}</p>
     </div>
 }
 

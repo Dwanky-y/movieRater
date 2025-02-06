@@ -1,4 +1,12 @@
-h1 {
+#title {
   color: green;
   text-align: center;
+  text-decoration: underline;
+  font-size: 40px;
+}
+
+#container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
