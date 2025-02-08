@@ -1,8 +1,28 @@
 
 .movieContainer {
+    /* Layout */
+    display:flex;
+    align-items: center;
+    
     /* Border */
     border-style:double;
     border-width: 2px;
     border-radius: 15px;
     border-color:coral;
+}
+
+.movieRank {
+    padding-right: 3%;
+}
+
+.movieDetails {
+    margin-left: 10px;
+}
+
+.movieName {
+    margin: 0;
+}
+
+.movieDesc {
+    margin: 0;
 }

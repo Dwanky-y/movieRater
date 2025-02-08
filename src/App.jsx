@@ -6,15 +6,22 @@ import { useState } from "react";
 function App() {
   
   const [movies, setMovies] = useState([
-    <MovieItem movieName = {"Cool Movie"} movieDesc={"This is a cool movie!"}></MovieItem>,
-    <MovieItem movieName = {"Cool Movie 2"} movieDesc={"This is a cool movie!"}></MovieItem>,
-    <MovieItem movieName = {"Cool Movie 33"} movieDesc={"This is a movie!"}></MovieItem>
+    { movieName: "Cool Movie", movieDesc: "This is a cool movie!" },
+    { movieName: "Cool Movie 2", movieDesc: "This is a cool movie!" },
+    { movieName: "Cool Movie 33", movieDesc: "This is a movie!" }
   ])
 
   return <>
   <h1 id="title">Movie Rater</h1>
   <div id="container">
-    {movies.map((item) => item)}
+    {movies.map((movie, index) => (
+      <MovieItem
+        key={index}
+        movieName={movie.movieName}
+        movieDesc={movie.movieDesc}
+        rank = {index + 1}
+      />
+      ) )}
   </div>
   
   </>
